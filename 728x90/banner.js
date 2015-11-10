@@ -218,7 +218,7 @@ function spriteSheetAnim() {
   });
 
   createjs.Ticker.addEventListener("tick", tickHandler);
-  initAnim.framerate = 44;
+  // initAnim.framerate = 44;
 
   function tickHandler(event) {
     stageP.update(event);
@@ -238,7 +238,7 @@ function anim1EndHandler() {
     }
   });
   TweenLite.delayedCall(3, frame2Handler);
-  initAnim.framerate = 38;
+  // initAnim.framerate = 38;
 
 
 };
@@ -296,7 +296,7 @@ function showCopy() {
   if (initAnim.currentFrame >= 177 && initAnim.currentFrame < 178) {
     if (bool137) {
 
-      initAnim.framerate = 12;
+      // initAnim.framerate = 12;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
@@ -316,7 +316,7 @@ function showCopy() {
 
   if (initAnim.currentFrame >= 207 && initAnim.currentFrame <= 263) {
 
-    initAnim.framerate = 51;
+    // initAnim.framerate = 51;
     TweenLite.to(frame_3_copy, 0.5, {
       alpha: 0,
       ease: Quad.easeOut,
@@ -327,13 +327,13 @@ function showCopy() {
 
   if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 322) {
     console.log('in Q point')
-    initAnim.framerate = 76;
+    // initAnim.framerate = 76;
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
   }
 
   if (initAnim.currentFrame >= 323) {
     console.log('in end point')
-    initAnim.framerate = 30;
+    // initAnim.framerate = 30;
     TweenLite.to(sky_logo, 0.2, {
       alpha: 1,
       ease: Quad.easeOut
