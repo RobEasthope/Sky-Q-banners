@@ -28,7 +28,7 @@ function initDynamicContent() {
   devDynamicContent.Feed_728x90[0].content = {
     "Spritesheet_min.jpg": {
       "Type": "file",
-      "Url": "spriteSheet_728x90_optimised.jpg"
+      "Url": "sprSheet_728x90_opt.jpg"
     },
 
     "frame_1_copy.png": {
@@ -103,15 +103,15 @@ function initDynamicContent() {
     framerate: 1,
     "images": [dynamicContent.Feed_728x90[0].content['Spritesheet_min.jpg']['Url']],
     "frames": {
+      "width": 728,
       "height": 90,
-      "count": 181,
-      "width": 728
+      "count": 350
     },
     "animations": {
-      "frame_1": [0, 31, "frame_1_stop"],
-      "frame_1_stop": [31],
-      "frame_2": [32, 181, "frame_2_stop"],
-      "frame_2_stop": [181]
+      "frame_1": [0, 54, "frame_1_stop"],
+      "frame_1_stop": [54],
+      "frame_2": [55, 348, "frame_2_stop"],
+      "frame_2_stop": [348]
     }
   });
 
@@ -148,6 +148,9 @@ function init() {
   loader.addEventListener("fileload", handleFileLoad);
   loader.addEventListener("complete", handleComplete);
   loader.loadManifest(manifest);
+
+
+
 }
 
 function handleFileLoad(evt) {
@@ -182,6 +185,9 @@ function handleComplete(evt) {
   spriteSheetAnim();
 }
 
+
+
+
 function spriteSheetAnim() {
 
   TweenLite.to(sheen, 0.1, {
@@ -200,6 +206,7 @@ function spriteSheetAnim() {
 
   stageP.addChild(ldframe_copy);
 
+
   initAnim.gotoAndPlay('frame_1');
   TweenLite.to(sky_logo, 0.2, {
     alpha: 1,
@@ -211,7 +218,7 @@ function spriteSheetAnim() {
   });
 
   createjs.Ticker.addEventListener("tick", tickHandler);
-  initAnim.framerate = 15;
+  initAnim.framerate = 35;
 
   function tickHandler(event) {
     stageP.update(event);
@@ -222,12 +229,6 @@ function spriteSheetAnim() {
 
 function anim1EndHandler() {
   initAnim.removeEventListener("animationend", anim1EndHandler);
-
-  TweenLite.to(sky_logo, 0.8, {
-    delay: 0,
-    alpha: 0
-  });
-
   TweenLite.to(f1_copy, 0.8, {
     delay: 0.5,
     alpha: 1,
@@ -236,9 +237,10 @@ function anim1EndHandler() {
       f1_copy.gotoAndPlay(2);
     }
   });
-
   TweenLite.delayedCall(3, frame2Handler);
-  initAnim.framerate = 20;
+  initAnim.framerate = 30;
+
+
 };
 
 function frame2Handler() {
@@ -246,12 +248,10 @@ function frame2Handler() {
     alpha: 0,
     ease: Quad.easeOut
   });
-
   TweenLite.to(f1_copy, 0.1, {
     alpha: 0,
     ease: Quad.easeOut
   });
-
   TweenLite.to(initAnim, 0.1, {
     alpha: 0,
     ease: Quad.easeOut,
@@ -259,7 +259,6 @@ function frame2Handler() {
       initAnim.gotoAndPlay('frame_2');
     }
   });
-
   TweenLite.to(frame_2_copy, 0.5, {
     delay: 0.1,
     alpha: 1,
@@ -274,11 +273,9 @@ function frame2Handler() {
       //initAnim.addEventListener("animationend",  anim2EndHandler);
     }
   });
-
   TweenLite.set(frame_3_copy, {
     scale: 1.2
   });
-
   myVar = setInterval(showCopy, 10);
 }
 
@@ -289,15 +286,14 @@ function showCopy() {
 
   console.log(initAnim.currentFrame);
 
-  if (initAnim.currentFrame >= 46) {
+  if (initAnim.currentFrame >= 116) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
     });
-    console.log('anim 46')
   }
 
-  if (initAnim.currentFrame >= 92 && initAnim.currentFrame < 93) {
+  if (initAnim.currentFrame >= 177 && initAnim.currentFrame < 178) {
     if (bool137) {
 
       initAnim.framerate = 10;
@@ -318,9 +314,9 @@ function showCopy() {
     }
   }
 
-  if (initAnim.currentFrame >= 118 && initAnim.currentFrame <= 130) {
-    initAnim.framerate = 10;
+  if (initAnim.currentFrame >= 207 && initAnim.currentFrame <= 263) {
 
+    initAnim.framerate = 40;
     TweenLite.to(frame_3_copy, 0.5, {
       alpha: 0,
       ease: Quad.easeOut,
@@ -329,24 +325,22 @@ function showCopy() {
   }
 
 
-  if (initAnim.currentFrame >= 138 && initAnim.currentFrame <= 167) {
+  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 322) {
     console.log('in Q point')
-    initAnim.framerate = 40;
+    initAnim.framerate = 60;
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
   }
 
-  if (initAnim.currentFrame >= 168) {
+  if (initAnim.currentFrame >= 323) {
     console.log('in end point')
-
-    initAnim.framerate = 10;
-
+    initAnim.framerate = 24;
     TweenLite.to(sky_logo, 0.2, {
       alpha: 1,
       ease: Quad.easeOut
     });
   }
 
-  if (initAnim.currentFrame >= 181) {
+  if (initAnim.currentFrame >= 348) {
     frame5Handler();
   }
 }
@@ -357,7 +351,6 @@ function frame5Handler() {
     delay: 1.7,
     alpha: 1
   });
-
   TweenLite.to(ldframe_copy, 0.8, {
     delay: 0.5,
     alpha: 1,
@@ -366,7 +359,6 @@ function frame5Handler() {
       ldframe_copy.gotoAndPlay(2);
     }
   });
-
   TweenLite.to(ld_cta, 0.5, {
     delay: 1.2,
     alpha: 1,
