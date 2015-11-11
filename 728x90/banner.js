@@ -255,7 +255,7 @@ function frame2Handler() {
     ease: Quad.easeOut
   });
   TweenLite.to(initAnim, 0.1, {
-    alpha: 0,
+    /*alpha: 0,*/
     ease: Quad.easeOut,
     onComplete: function() {
       initAnim.gotoAndPlay('frame_2');
@@ -296,10 +296,10 @@ function showCopy() {
     });
   }
 
-  if (initAnim.currentFrame >= 218 && initAnim.currentFrame < 220) {
+  if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
     if (bool137) {
 
-      initAnim.framerate = 15;
+      initAnim.framerate = 13;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
