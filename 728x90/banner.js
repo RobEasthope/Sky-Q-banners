@@ -167,8 +167,8 @@ function handleComplete(evt) {
   f1_copy = new lib.copy1_mc();
   ldframe_copy = new lib.end_copy();
 
-  f1_copy.x = 150;
-  f1_copy.y = 125;
+  f1_copy.x = 0;
+  f1_copy.y = 0;
   ldframe_copy.x = 150;
   ldframe_copy.y = 125;
   // console.log("exportRoot  "+ f1_copy);
@@ -185,13 +185,12 @@ function handleComplete(evt) {
   spriteSheetAnim();
 }
 
-
-
-
 function spriteSheetAnim() {
 
   TweenLite.to(sheen, 0.1, {
-    y: 205,
+    x: 400,
+    y: 0,
+    height:90,
     ease: Quad.easeOut
   });
 
@@ -235,6 +234,7 @@ function anim1EndHandler() {
     ease: Quad.easeOut,
     onComplete: function() {
       f1_copy.gotoAndPlay(2);
+      console.log('hello '+f1_copy)
     }
   });
 
@@ -369,8 +369,9 @@ function frame5Handler() {
     ease: Quad.easeOut,
     onComplete: function() {
       TweenLite.to(sheen, 1, {
-        delay: 1,
-        x: 180,
+        delay: 1.3,
+        // Final position of CTA sheen
+        x: 580,
         ease: Quad.easeOut,
         onComplete: function() {
           TweenLite.to(sheen, 0.1, {
