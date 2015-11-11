@@ -26,7 +26,7 @@ function initDynamicContent() {
   devDynamicContent.Feed_728x90[0].endDate.UtcValue = 0;
   devDynamicContent.Feed_728x90[0].youtubeId = "-Bpm35wZ0us";
   devDynamicContent.Feed_728x90[0].content = {
-    "Spritesheet_min.jpg": {
+    "sprSheet_728x90_opt.jpg": {
       "Type": "file",
       "Url": "sprSheet_728x90_opt.jpg"
     },
