@@ -260,7 +260,8 @@ function frame2Handler() {
     }
   });
   TweenLite.to(frame_2_copy, 0.5, {
-    delay: 0.1,
+    // Deplay the entrance of frame_2_copy
+    delay: 1.75,
     alpha: 1,
     ease: Quad.easeOut
   });
