@@ -5,7 +5,7 @@ body {
 }
 #exitButton {
     position: absolute;
-    width: 160px;
+    width: 120px;
     height: 600px;
     top: 0px;
     left: 10px;
@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 160px;
+    width: 120px;
     height: 600px;
     background-color:transparent;
     box-sizing:border-box;

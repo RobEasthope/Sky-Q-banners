@@ -14,21 +14,21 @@ function initDynamicContent() {
 
   Enabler.setProfileId(1062200);
   var devDynamicContent = {};
-  devDynamicContent.Feed_160x600 = [{}];
-  devDynamicContent.Feed_160x600[0]._id = 0;
-  devDynamicContent.Feed_160x600[0].id = 1;
-  devDynamicContent.Feed_160x600[0].reporting_label = "REPORTING_LABEL";
-  devDynamicContent.Feed_160x600[0].startDate = {};
-  devDynamicContent.Feed_160x600[0].startDate.RawValue = "";
-  devDynamicContent.Feed_160x600[0].startDate.UtcValue = 0;
-  devDynamicContent.Feed_160x600[0].endDate = {};
-  devDynamicContent.Feed_160x600[0].endDate.RawValue = "";
-  devDynamicContent.Feed_160x600[0].endDate.UtcValue = 0;
-  devDynamicContent.Feed_160x600[0].youtubeId = "-Bpm35wZ0us";
-  devDynamicContent.Feed_160x600[0].content = {
-    "Spritesheet_min.jpg": {
+  devDynamicContent.Feed_300x50 = [{}];
+  devDynamicContent.Feed_300x50[0]._id = 0;
+  devDynamicContent.Feed_300x50[0].id = 1;
+  devDynamicContent.Feed_300x50[0].reporting_label = "REPORTING_LABEL";
+  devDynamicContent.Feed_300x50[0].startDate = {};
+  devDynamicContent.Feed_300x50[0].startDate.RawValue = "";
+  devDynamicContent.Feed_300x50[0].startDate.UtcValue = 0;
+  devDynamicContent.Feed_300x50[0].endDate = {};
+  devDynamicContent.Feed_300x50[0].endDate.RawValue = "";
+  devDynamicContent.Feed_300x50[0].endDate.UtcValue = 0;
+  devDynamicContent.Feed_300x50[0].youtubeId = "-Bpm35wZ0us";
+  devDynamicContent.Feed_300x50[0].content = {
+    "sprSheet_300x50_opt.jpg": {
       "Type": "file",
-      "Url": "sprSheet_160x600_opt.jpg"
+      "Url": "sprSheet_300x50_opt.jpg"
     },
 
     "frame_1_copy.png": {
@@ -72,39 +72,39 @@ function initDynamicContent() {
     }
   };
 
-  //    devDynamicContent.Feed_160x600[0].legalsButton = "";
-  //    devDynamicContent.Feed_160x600[0].legalsCopy = "Comparison against Netflix and LOVEFiLM Instant using top 100 from UK box office over 12 months.  See sky.com\/blockbusters. On Demand: Available to Sky TV customers with compatible Sky+ box. Downloading content requires compatible black Sky+ box, broadband connection (minimum recommended speed 2 Mbps).  Content depends on your Sky TV\/HD subscription. \u00A9 2014 Disney Enterprises, Inc. All Rights Reserved. \u00A9 2014 Disney Enterprises, Inc. \u00A9 2015 Marvel .";
-  devDynamicContent.Feed_160x600[0].DEFAULT = true;
+  //    devDynamicContent.Feed_300x50[0].legalsButton = "";
+  //    devDynamicContent.Feed_300x50[0].legalsCopy = "Comparison against Netflix and LOVEFiLM Instant using top 100 from UK box office over 12 months.  See sky.com\/blockbusters. On Demand: Available to Sky TV customers with compatible Sky+ box. Downloading content requires compatible black Sky+ box, broadband connection (minimum recommended speed 2 Mbps).  Content depends on your Sky TV\/HD subscription. \u00A9 2014 Disney Enterprises, Inc. All Rights Reserved. \u00A9 2014 Disney Enterprises, Inc. \u00A9 2015 Marvel .";
+  devDynamicContent.Feed_300x50[0].DEFAULT = true;
   Enabler.setDevDynamicContent(devDynamicContent);
 
   // ADD DYNAMIC ASSETS:
   document.getElementById("bottom_container").innerHTML += "<div id='Preload' class='preLoader' style='left: px;'></div>"
   document.getElementById('Preload').style["top"] = (window.innerHeight / 2) + 'px';
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['frame_1_copy.png']['Url'] + " id='frame_1_copy' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_1_copy.png']['Url'] + " id='frame_1_copy' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['frame_2_copy.png']['Url'] + " id='frame_2_copy' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_2_copy.png']['Url'] + " id='frame_2_copy' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['frame_3_copy.png']['Url'] + " id='frame_3_copy' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_3_copy.png']['Url'] + " id='frame_3_copy' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['ld_copy.png']['Url'] + " id='ld_copy' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['ld_copy.png']['Url'] + " id='ld_copy' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['ld_cta.png']['Url'] + " id='ld_cta' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['ld_cta.png']['Url'] + " id='ld_cta' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['sheen.png']['Url'] + " id='sheen' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['sheen.png']['Url'] + " id='sheen' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['sky_glass_logo.png']['Url'] + " id='sky_glass_logo' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['sky_glass_logo.png']['Url'] + " id='sky_glass_logo' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_160x600[0].content['sky_logo.png']['Url'] + " id='sky_logo' class='images fade'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['sky_logo.png']['Url'] + " id='sky_logo' class='images fade'></img>";
 
   // create a new stage and point it at our canvas:
   stageP = new createjs.Stage(document.getElementById("testCanvas"));
   spriteSheet1 = new createjs.SpriteSheet({
     framerate: 20,
-    "images": [dynamicContent.Feed_160x600[0].content['Spritesheet_min.jpg']['Url']],
+    "images": [dynamicContent.Feed_300x50[0].content['sprSheet_300x50_opt.jpg']['Url']],
     "frames": {
-      "width": 160,
-      "height": 600,
+      "width": 300,
+      "height": 50,
       "count": 350
     },
     "animations": {
@@ -137,10 +137,10 @@ function init() {
   images = images || {};
 
   var manifest = [{
-    src: dynamicContent.Feed_160x600[0].content['frame_1_copy.png']['Url'],
+    src: dynamicContent.Feed_300x50[0].content['frame_1_copy.png']['Url'],
     id: "frame_1_copy"
   }, {
-    src: dynamicContent.Feed_160x600[0].content['ld_copy.png']['Url'],
+    src: dynamicContent.Feed_300x50[0].content['ld_copy.png']['Url'],
     id: "ld_copy"
   }]
 
@@ -394,9 +394,9 @@ bgExitHandler = function(e) {
 //    this.container = document.getElementById('legalsContainer');
 //     document.getElementById("legalsContainer").style.zIndex = "900";
 //    // LEGALS BUTTON:
-//    this.container.innerHTML+="<div id='legalbtn' class='clicklegals'>"+dynamicContent.Feed_160x600[0].legalsButton+"</div>";
+//    this.container.innerHTML+="<div id='legalbtn' class='clicklegals'>"+dynamicContent.Feed_300x50[0].legalsButton+"</div>";
 //    // LEGALS COPY:
-//    this.container.innerHTML +="<div id='rollovercontent' class='legalscopy' style='max-height:"+(window.innerHeight-30)+"px;'>"+dynamicContent.Feed_160x600[0].legalsCopy+"</div>"
+//    this.container.innerHTML +="<div id='rollovercontent' class='legalscopy' style='max-height:"+(window.innerHeight-30)+"px;'>"+dynamicContent.Feed_300x50[0].legalsCopy+"</div>"
 //
 //    this.container.innerHTML+="<div id='closeBtn' class='legalsClose' style='left:"+((document.getElementById('rollovercontent').offsetHeight)>(window.innerHeight-31)?(window.innerWidth-36):(window.innerWidth-21))+"px;'></div>"
 //    document.getElementById('legalbtn').style["top"] = (window.innerHeight-(document.getElementById('legalbtn').offsetHeight))+"px";

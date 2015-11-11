@@ -101,7 +101,7 @@ function initDynamicContent() {
   stageP = new createjs.Stage(document.getElementById("testCanvas"));
   spriteSheet1 = new createjs.SpriteSheet({
     framerate: 20,
-    "images": [dynamicContent.Feed_160x600[0].content['Spritesheet_min.jpg']['Url']],
+    "images": [dynamicContent.Feed_160x600[0].content['sprSheet_160x600_opt.jpg']['Url']],
     "frames": {
       "width": 160,
       "height": 600,
