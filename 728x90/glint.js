@@ -117,7 +117,7 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,728,90);
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(24));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(39));
 
 	// Mask (mask)
 	var mask = new cjs.Shape();
@@ -131,13 +131,13 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,728,90);
 
 	this.instance.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:664.4,y:39},22).wait(3));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:664.4,y:39},37).wait(3));
 
 	// Layer 1
 	this.instance_1 = new lib.Tween3("synched",0);
 	this.instance_1.setTransform(362.5,44.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({startPosition:0},22).wait(3));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({startPosition:0},37).wait(3));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-1.5,-0.5,728,90);
