@@ -209,7 +209,7 @@ function spriteSheetAnim() {
 
   initAnim.gotoAndPlay('frame_1');
   TweenLite.to(sky_logo, 0.2, {
-    alpha: 1,
+    alpha: 0,
     ease: Quad.easeOut
   });
   TweenLite.to(initAnim, 0.5, {
