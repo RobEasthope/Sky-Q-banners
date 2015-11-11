@@ -108,9 +108,9 @@ function initDynamicContent() {
       "count": 350
     },
     "animations": {
-      "frame_1": [0, 54, "frame_1_stop"],
-      "frame_1_stop": [54],
-      "frame_2": [55, 348, "frame_2_stop"],
+      "frame_1": [0, 62, "frame_1_stop"],
+      "frame_1_stop": [62],
+      "frame_2": [62, 348, "frame_2_stop"],
       "frame_2_stop": [348]
     }
   });
@@ -237,8 +237,10 @@ function anim1EndHandler() {
       f1_copy.gotoAndPlay(2);
     }
   });
+
+  // Pauses at splash
   TweenLite.delayedCall(3, frame2Handler);
-  // initAnim.framerate = 38;
+  // initAnim.framerate = 20;
 
 
 };
@@ -287,17 +289,17 @@ function showCopy() {
 
   console.log(initAnim.currentFrame);
 
-  if (initAnim.currentFrame >= 116) {
+  if (initAnim.currentFrame >= 131) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
     });
   }
 
-  if (initAnim.currentFrame >= 177 && initAnim.currentFrame < 178) {
+  if (initAnim.currentFrame >= 218 && initAnim.currentFrame < 220) {
     if (bool137) {
 
-      // initAnim.framerate = 12;
+      initAnim.framerate = 15;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
@@ -315,9 +317,10 @@ function showCopy() {
     }
   }
 
-  if (initAnim.currentFrame >= 207 && initAnim.currentFrame <= 263) {
+  // if (initAnim.currentFrame >= 207 && initAnim.currentFrame <= 263) {
+  if (initAnim.currentFrame >= 245 && initAnim.currentFrame <= 247) {
 
-    // initAnim.framerate = 51;
+    initAnim.framerate = 20;
     TweenLite.to(frame_3_copy, 0.5, {
       alpha: 0,
       ease: Quad.easeOut,
