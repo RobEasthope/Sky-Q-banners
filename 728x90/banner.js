@@ -338,7 +338,7 @@ function showCopy() {
   if (initAnim.currentFrame >= 323) {
     console.log('in end point')
     // initAnim.framerate = 30;
-    TweenLite.to(sky_logo, 0.2, {
+    TweenLite.to(sky_logo, 2, {
       alpha: 1,
       ease: Quad.easeOut
     });
