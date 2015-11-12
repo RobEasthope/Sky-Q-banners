@@ -189,9 +189,9 @@ function spriteSheetAnim() {
 
   TweenLite.to(sheen, 0.1, {
     // End point CTA sheen
-    x: 400,
-    y: 0,
-    height:90,
+    x: -200,
+    y: 400,
+    height:200,
     ease: Quad.easeOut
   });
 
@@ -264,7 +264,7 @@ function frame2Handler() {
   });
   TweenLite.to(frame_2_copy, 0.5, {
     // Deplay the entrance of frame_2_copy
-    delay: 1.75,
+    delay: 1.85,
     alpha: 1,
     ease: Quad.easeOut
   });
@@ -290,7 +290,7 @@ function showCopy() {
 
   // console.log(initAnim.currentFrame);
 
-  if (initAnim.currentFrame >= 131) {
+  if (initAnim.currentFrame >= 125) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
@@ -372,7 +372,8 @@ function frame5Handler() {
       TweenLite.to(sheen, 1, {
         delay: 1.3,
         // Final position of CTA sheen
-        x: 580,
+        x: 300,
+        height:200,
         ease: Quad.easeOut,
         onComplete: function() {
           TweenLite.to(sheen, 0.1, {
