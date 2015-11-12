@@ -264,7 +264,7 @@ function frame2Handler() {
   });
   TweenLite.to(frame_2_copy, 0.5, {
     // Deplay the entrance of frame_2_copy
-    delay: 1.85,
+    delay: 1.65,
     alpha: 1,
     ease: Quad.easeOut
   });
@@ -290,7 +290,7 @@ function showCopy() {
 
   // console.log(initAnim.currentFrame);
 
-  if (initAnim.currentFrame >= 125) {
+  if (initAnim.currentFrame >= 128) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
@@ -336,7 +336,7 @@ function showCopy() {
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
   }
 
-  if (initAnim.currentFrame >= 323) {
+  if (initAnim.currentFrame >= 300) {
     console.log('in end point')
     // initAnim.framerate = 30;
     TweenLite.to(sky_logo, 2, {
