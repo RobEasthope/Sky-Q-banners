@@ -26,7 +26,7 @@ function initDynamicContent() {
   devDynamicContent.Feed_160x600[0].endDate.UtcValue = 0;
   devDynamicContent.Feed_160x600[0].youtubeId = "-Bpm35wZ0us";
   devDynamicContent.Feed_160x600[0].content = {
-    "Spritesheet_min.jpg": {
+    "sprSheet_160x600_opt.jpg": {
       "Type": "file",
       "Url": "sprSheet_160x600_opt.jpg"
     },
@@ -105,13 +105,13 @@ function initDynamicContent() {
     "frames": {
       "width": 160,
       "height": 600,
-      "count": 350
+      "count": 330
     },
     "animations": {
       "frame_1": [0, 62, "frame_1_stop"],
       "frame_1_stop": [62],
-      "frame_2": [62, 348, "frame_2_stop"],
-      "frame_2_stop": [348]
+      "frame_2": [62, 329, "frame_2_stop"],
+      "frame_2_stop": [329]
     }
   });
 
@@ -288,7 +288,7 @@ var bool137 = true;
 function showCopy() {
 
 
-  console.log(initAnim.currentFrame);
+  // console.log(initAnim.currentFrame);
 
   if (initAnim.currentFrame >= 131) {
     TweenLite.to(frame_2_copy, 0.1, {
@@ -330,7 +330,7 @@ function showCopy() {
   }
 
 
-  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 322) {
+  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 300) {
     console.log('in Q point')
     // initAnim.framerate = 76;
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
@@ -345,7 +345,7 @@ function showCopy() {
     });
   }
 
-  if (initAnim.currentFrame >= 348) {
+  if (initAnim.currentFrame >= 319) {
     frame5Handler();
   }
 }
