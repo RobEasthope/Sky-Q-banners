@@ -69,6 +69,11 @@ function initDynamicContent() {
     "sheen.png": {
       "Type": "file",
       "Url": "sheen.png"
+    },
+
+    "hi_res_final_frame.jpg": {
+      "Type": "file",
+      "Url": "hi_res_final_frame.jpg"
     }
   };
 
@@ -96,6 +101,8 @@ function initDynamicContent() {
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['sky_glass_logo.png']['Url'] + " id='sky_glass_logo' class='images fade'></img>";
 
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['sky_logo.png']['Url'] + " id='sky_logo' class='images fade'></img>";
+
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['hi_res_final_frame.jpg']['Url'] + " id='hi_res_final_frame' class='images fade'></img>";
 
   // create a new stage and point it at our canvas:
   stageP = new createjs.Stage(document.getElementById("testCanvas"));
@@ -346,6 +353,14 @@ function showCopy() {
 
   if (initAnim.currentFrame >= 342) {
     frame5Handler();
+  }
+
+  if (initAnim.currentFrame >= 342) {
+    TweenLite.to(hi_res_final_frame, 0.1, {
+      delay: 4,
+      alpha: 1,
+      ease: Quad.easeOut
+    });
   }
 }
 
