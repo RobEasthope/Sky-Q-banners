@@ -26,9 +26,9 @@ function initDynamicContent() {
   devDynamicContent.Feed_728x90[0].endDate.UtcValue = 0;
   devDynamicContent.Feed_728x90[0].youtubeId = "-Bpm35wZ0us";
   devDynamicContent.Feed_728x90[0].content = {
-    "sprSheet_728x90_opt.jpg": {
+    "sprSheet_728x90_opt2.jpg": {
       "Type": "file",
-      "Url": "sprSheet_728x90_opt.jpg"
+      "Url": "sprSheet_728x90_opt2.jpg"
     },
 
     "frame_1_copy.png": {
@@ -101,17 +101,17 @@ function initDynamicContent() {
   stageP = new createjs.Stage(document.getElementById("testCanvas"));
   spriteSheet1 = new createjs.SpriteSheet({
     framerate: 20,
-    "images": [dynamicContent.Feed_728x90[0].content['sprSheet_728x160_opt.jpg']['Url']],
+    "images": [dynamicContent.Feed_728x90[0].content['sprSheet_728x90_opt2.jpg']['Url']],
     "frames": {
       "width": 728,
       "height": 90,
-      "count": 350
+      "count": 343
     },
     "animations": {
       "frame_1": [0, 62, "frame_1_stop"],
       "frame_1_stop": [62],
-      "frame_2": [62, 348, "frame_2_stop"],
-      "frame_2_stop": [348]
+      "frame_2": [62, 342, "frame_2_stop"],
+      "frame_2_stop": [342]
     }
   });
 
@@ -344,7 +344,7 @@ function showCopy() {
     });
   }
 
-  if (initAnim.currentFrame >= 348) {
+  if (initAnim.currentFrame >= 342) {
     frame5Handler();
   }
 }
