@@ -294,7 +294,7 @@ function showCopy() {
 
   // console.log(initAnim.currentFrame);
   if (initAnim.currentFrame >= 91) {
-    initAnim.framerate = 10;
+    initAnim.framerate = 20;
   }
 
   if (initAnim.currentFrame >= 128) {
@@ -309,7 +309,7 @@ function showCopy() {
   if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
     if (bool137) {
 
-      initAnim.framerate = 13;
+      initAnim.framerate = 20;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
@@ -339,10 +339,14 @@ function showCopy() {
   }
 
 
-  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 300) {
+  if (initAnim.currentFrame >= 279) {
     console.log('in Q point')
-    // initAnim.framerate = 76;
+    initAnim.framerate = 10;
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
+  }
+
+  if (initAnim.currentFrame >= 292) {
+    initAnim.framerate = 20;
   }
 
   if (initAnim.currentFrame >= 300) {
