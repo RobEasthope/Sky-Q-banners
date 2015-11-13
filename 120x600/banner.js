@@ -105,13 +105,13 @@ function initDynamicContent() {
     "frames": {
       "width": 120,
       "height": 600,
-      "count": 350
+      "count": 330
     },
     "animations": {
       "frame_1": [0, 62, "frame_1_stop"],
       "frame_1_stop": [62],
-      "frame_2": [62, 348, "frame_2_stop"],
-      "frame_2_stop": [348]
+      "frame_2": [62, 329, "frame_2_stop"],
+      "frame_2_stop": [329]
     }
   });
 
@@ -148,9 +148,6 @@ function init() {
   loader.addEventListener("fileload", handleFileLoad);
   loader.addEventListener("complete", handleComplete);
   loader.loadManifest(manifest);
-
-
-
 }
 
 function handleFileLoad(evt) {
@@ -189,9 +186,9 @@ function spriteSheetAnim() {
 
   TweenLite.to(sheen, 0.1, {
     // End point CTA sheen
-    x: 400,
-    y: 0,
-    height:90,
+    x: -200,
+    y: 400,
+    height:200,
     ease: Quad.easeOut
   });
 
@@ -241,7 +238,7 @@ function anim1EndHandler() {
 
   // Pauses at splash
   TweenLite.delayedCall(3, frame2Handler);
-  // initAnim.framerate = 20;
+  initAnim.framerate = 20;
 
 
 };
@@ -260,11 +257,18 @@ function frame2Handler() {
     ease: Quad.easeOut,
     onComplete: function() {
       initAnim.gotoAndPlay('frame_2');
+      // initAnim.framerate = 10
     }
   });
+
+  // if (initAnim.currentFrame >= 60) {
+  //   initAnim.framerate = 10;
+  // }
+
+
   TweenLite.to(frame_2_copy, 0.5, {
     // Deplay the entrance of frame_2_copy
-    delay: 1.75,
+    delay: 1.65,
     alpha: 1,
     ease: Quad.easeOut
   });
@@ -288,13 +292,18 @@ var bool137 = true;
 function showCopy() {
 
 
-  console.log(initAnim.currentFrame);
+  // console.log(initAnim.currentFrame);
+  if (initAnim.currentFrame >= 91) {
+    initAnim.framerate = 10;
+  }
 
-  if (initAnim.currentFrame >= 131) {
+  if (initAnim.currentFrame >= 128) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
     });
+
+    initAnim.framerate = 20
   }
 
   if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
@@ -330,13 +339,13 @@ function showCopy() {
   }
 
 
-  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 322) {
+  if (initAnim.currentFrame >= 264 && initAnim.currentFrame <= 300) {
     console.log('in Q point')
     // initAnim.framerate = 76;
     // TweenLite.to(frame_3_copy,0.5,{alpha:0,ease:Quad.easeOut, overwrite:0});
   }
 
-  if (initAnim.currentFrame >= 323) {
+  if (initAnim.currentFrame >= 300) {
     console.log('in end point')
     // initAnim.framerate = 30;
     TweenLite.to(sky_logo, 2, {
@@ -345,7 +354,7 @@ function showCopy() {
     });
   }
 
-  if (initAnim.currentFrame >= 348) {
+  if (initAnim.currentFrame >= 319) {
     frame5Handler();
   }
 }
@@ -372,7 +381,8 @@ function frame5Handler() {
       TweenLite.to(sheen, 1, {
         delay: 1.3,
         // Final position of CTA sheen
-        x: 580,
+        x: 300,
+        height:200,
         ease: Quad.easeOut,
         onComplete: function() {
           TweenLite.to(sheen, 0.1, {

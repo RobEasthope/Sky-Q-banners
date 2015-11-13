@@ -148,9 +148,6 @@ function init() {
   loader.addEventListener("fileload", handleFileLoad);
   loader.addEventListener("complete", handleComplete);
   loader.loadManifest(manifest);
-
-
-
 }
 
 function handleFileLoad(evt) {
@@ -241,7 +238,7 @@ function anim1EndHandler() {
 
   // Pauses at splash
   TweenLite.delayedCall(3, frame2Handler);
-  // initAnim.framerate = 20;
+  initAnim.framerate = 20;
 
 
 };
@@ -260,8 +257,15 @@ function frame2Handler() {
     ease: Quad.easeOut,
     onComplete: function() {
       initAnim.gotoAndPlay('frame_2');
+      // initAnim.framerate = 10
     }
   });
+
+  // if (initAnim.currentFrame >= 60) {
+  //   initAnim.framerate = 10;
+  // }
+
+
   TweenLite.to(frame_2_copy, 0.5, {
     // Deplay the entrance of frame_2_copy
     delay: 1.65,
@@ -289,12 +293,17 @@ function showCopy() {
 
 
   // console.log(initAnim.currentFrame);
+  if (initAnim.currentFrame >= 91) {
+    initAnim.framerate = 10;
+  }
 
   if (initAnim.currentFrame >= 128) {
     TweenLite.to(frame_2_copy, 0.1, {
       alpha: 0,
       ease: Quad.easeOut
     });
+
+    initAnim.framerate = 20
   }
 
   if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
