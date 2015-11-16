@@ -1,17 +1,13 @@
-//For Polite load
+//For JS dependencies for polite load
 function loadJSDependencies() {
   head.load("https://code.createjs.com/easeljs-0.8.1.min.js", "https://code.createjs.com/tweenjs-0.6.1.min.js", "https://code.createjs.com/movieclip-0.8.1.min.js", "https://code.createjs.com/preloadjs-0.4.1.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/BezierPlugin.min.js", "glint.js", initDynamicContent);
 }
 
+// Load JS dependencies
 loadJSDependencies();
 
-
-////
-var stageP, spriteSheet, count = 0,
-  myVar;
-
 function initDynamicContent() {
-
+  // What is all this? Possibly good defaults mixed in with old code
   Enabler.setProfileId(1062200);
   var devDynamicContent = {};
   devDynamicContent.Feed_300x50 = [{}];
@@ -25,6 +21,8 @@ function initDynamicContent() {
   devDynamicContent.Feed_300x50[0].endDate.RawValue = "";
   devDynamicContent.Feed_300x50[0].endDate.UtcValue = 0;
   devDynamicContent.Feed_300x50[0].youtubeId = "-Bpm35wZ0us";
+
+  // Declare file assets
   devDynamicContent.Feed_300x50[0].content = {
     "frame_1.jpg": {
       "Type": "file",
@@ -46,10 +44,11 @@ function initDynamicContent() {
     }
   };
 
+  // ???
   devDynamicContent.Feed_300x50[0].DEFAULT = true;
   Enabler.setDevDynamicContent(devDynamicContent);
 
-  // ADD DYNAMIC ASSETS:
+  // Add dynamic assets to DOM
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_1.jpg']['Url'] + " id='frame_1' class='images '></img>";
 
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_2.jpg']['Url'] + " id='frame_2' class='images fade'></img>";
