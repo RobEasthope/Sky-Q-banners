@@ -58,9 +58,9 @@ function initDynamicContent() {
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_4.jpg']['Url'] + " id='frame_4' class='images fade '></img>";
 }
 
-function loadHandler() {
+// function loadHandler() {
   init();
-}
+// }
 
 
 var canvas, stage, exportRoot;
