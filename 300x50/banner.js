@@ -58,11 +58,6 @@ function initDynamicContent() {
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_300x50[0].content['frame_4.jpg']['Url'] + " id='frame_4' class='images fade '></img>";
 }
 
-// function loadHandler() {
-  init();
-// }
-
-
 var canvas, stage, exportRoot;
 
 function init() {
@@ -88,3 +83,6 @@ function animateFrames() {
 bgExitHandler = function(e) {
   Enabler.exit('HTML5_Clickthrough');
 }
+
+// Init code
+init();
