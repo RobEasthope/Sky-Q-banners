@@ -60,9 +60,7 @@ function initDynamicContent() {
 }
 
 function loadHandler() {
-  // spriteSheet1.removeEventListener("complete", loadHandler);
   init();
-  //setLegals();
 }
 
 
