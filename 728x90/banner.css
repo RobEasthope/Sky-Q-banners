@@ -67,7 +67,13 @@ body {
 }
 .images{
     position:absolute;
+    z-index: 2;
 }
+
+.final-frame {
+  z-index: 1;
+}
+
 .fade{
     opacity:0;
 }
