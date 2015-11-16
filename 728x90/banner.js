@@ -102,7 +102,7 @@ function initDynamicContent() {
 
   document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['sky_logo.png']['Url'] + " id='sky_logo' class='images fade'></img>";
 
-  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['hi_res_final_frame.png']['Url'] + " id='hi_res_final_frame' class='images fade final-frame'></img>";
+  document.getElementById("middle_container").innerHTML += "<img src=" + dynamicContent.Feed_728x90[0].content['hi_res_final_frame.png']['Url'] + " id='hi_res_final_frame' class='images fade final-frame' style='top:1px;'></img>";
 
   // create a new stage and point it at our canvas:
   stageP = new createjs.Stage(document.getElementById("testCanvas"));
@@ -306,7 +306,7 @@ function showCopy() {
   if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
     if (bool137) {
 
-      initAnim.framerate = 13;
+      initAnim.framerate = 15;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
@@ -344,7 +344,7 @@ function showCopy() {
 
   if (initAnim.currentFrame >= 323) {
     console.log('in end point')
-    // initAnim.framerate = 30;
+    initAnim.framerate = 30;
     TweenLite.to(sky_logo, 2, {
       alpha: 1,
       ease: Quad.easeOut
@@ -352,8 +352,8 @@ function showCopy() {
   }
 
   if (initAnim.currentFrame >= 342) {
-    TweenLite.to(hi_res_final_frame, 0.1, {
-      delay: 0.2,
+    TweenLite.to(hi_res_final_frame, 0.4, {
+      delay: 0.1,
       alpha: 1,
       ease: Quad.easeOut
     });
