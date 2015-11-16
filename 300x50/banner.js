@@ -83,51 +83,11 @@ function handleFileLoad(evt) {
   }
 }
 
-
 function animateFrames() {
   // Setup bgExitHandler listener
   document.getElementById("exitButton").addEventListener('click', bgExitHandler, false);
-
 }
-
-
-
 
 bgExitHandler = function(e) {
   Enabler.exit('HTML5_Clickthrough');
 }
-
-//// set legals
-//function setLegals(){
-//    // CONTAINER:
-//    this.container = document.getElementById('legalsContainer');
-//     document.getElementById("legalsContainer").style.zIndex = "900";
-//    // LEGALS BUTTON:
-//    this.container.innerHTML+="<div id='legalbtn' class='clicklegals'>"+dynamicContent.Feed_300x50[0].legalsButton+"</div>";
-//    // LEGALS COPY:
-//    this.container.innerHTML +="<div id='rollovercontent' class='legalscopy' style='max-height:"+(window.innerHeight-30)+"px;'>"+dynamicContent.Feed_300x50[0].legalsCopy+"</div>"
-//
-//    this.container.innerHTML+="<div id='closeBtn' class='legalsClose' style='left:"+((document.getElementById('rollovercontent').offsetHeight)>(window.innerHeight-31)?(window.innerWidth-36):(window.innerWidth-21))+"px;'></div>"
-//    document.getElementById('legalbtn').style["top"] = (window.innerHeight-(document.getElementById('legalbtn').offsetHeight))+"px";
-//    document.getElementById('rollovercontent').style["top"] = window.innerHeight+'px';
-//
-//    document.getElementById('closeBtn').style["top"] = window.innerHeight+5+'px';
-//
-//    document.getElementById('legalbtn').style['text-align'] ='left';
-//
-//    document.getElementById('legalbtn').addEventListener('click',onLegalsClick);
-//    document.getElementById('closeBtn').addEventListener('click',onLegalsClose);
-//
-//}
-//
-//onLegalsClick = function(){
-//    Enabler.counter('LegalsClicked')
-//    document.getElementById("borderDiv").style.zIndex = "900";
-//    TweenLite.to('#rollovercontent', .5, {ease:Cubic.easeInOut, top:window.innerHeight-(document.getElementById('rollovercontent').offsetHeight)});
-//    TweenLite.to('#closeBtn', .5, {ease:Cubic.easeInOut, top:window.innerHeight-(document.getElementById('rollovercontent').offsetHeight-1)});
-//}
-//
-//onLegalsClose = function(){
-//    TweenLite.to('#rollovercontent', .5, {ease:Cubic.easeInOut, top:window.innerHeight, onComplete:function(){ document.getElementById("borderDiv").style.zIndex = "500";}});
-//    TweenLite.to('#closeBtn', .5, {ease:Cubic.easeInOut, top:window.innerHeight+1});
-//}
