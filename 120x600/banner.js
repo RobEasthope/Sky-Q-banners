@@ -306,10 +306,12 @@ function showCopy() {
     initAnim.framerate = 20
   }
 
-  if (initAnim.currentFrame >= 220 && initAnim.currentFrame < 222) {
+  if (initAnim.currentFrame >= 220) {
+    initAnim.framerate = 10;
+
     if (bool137) {
 
-      initAnim.framerate = 20;
+      // initAnim.framerate = 20;
       //TweenLite.to(frame_3_copy, 0.1, {setScale:1.5});
 
       TweenLite.to(frame_3_copy, 0.5, {
@@ -325,6 +327,10 @@ function showCopy() {
       console.log('IN FRAME')
       bool137 = false;
     }
+  }
+
+  if (initAnim.currentFrame >= 235) {
+    initAnim.framerate = 20;
   }
 
   // if (initAnim.currentFrame >= 207 && initAnim.currentFrame <= 263) {
